@@ -11,11 +11,11 @@ class Register {
                     
                     <legend>Inscription</legend>
 
-                    <label for="idn">Nom :</label>
-                    <input type="text" id="idn" name="last_name" autocomplete="off"/><br>
+                    <label for="idemail">E-mail :</label>
+                    <input type="email" id="idemail" name="email" autocomplete="off"/><br>
 
-                    <label for="idfn">Prénom :</label>
-                    <input type="text" id="idfn" name="first_name" autocomplete="off"/><br>
+                    <label for="idusrn">Nom d'utilisateur :</label>
+                    <input type="text" id="idusrn" name="username" autocomplete="off"/><br>
 
                     <label for="idpwd">Mot de passe :</label>
                     <input type="password" id="idpwd" name="pwd" autocomplete="off"/><br>

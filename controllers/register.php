@@ -15,17 +15,17 @@ class Register
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-            $lastName = $_POST['last_name'] ?? '';
-            $firstName = $_POST['first_name'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $username = $_POST['username'] ?? '';
             $password = $_POST['pwd'] ?? '';
             $confirmation = $_POST['conf'] ?? '';
 
-            if ($lastName === '' || $firstName === '' || $password === '' || $confirmation === '') {
+            if ($email === '' || $username === '' || $password === '' || $confirmation === '') {
                 $notFilled = true;
             } elseif ($password !== $confirmation) {
                 $validPassword = false;
             } else {
-                $this->userRepository->insertUser($lastName, $firstName, $password);
+                $this->userRepository->insertUser($email, $username, $password);
                 header('Location: /');
                 exit;
             }
