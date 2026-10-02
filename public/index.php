@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../vendor/autoload.php';
-require '../src/_assets/includes/autoloader.php';
+require '../src/_assets/Includes/autoloader.php';
 
 $routes = [
     '/'      => \Controllers\Homepage::class,
