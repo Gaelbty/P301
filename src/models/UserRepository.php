@@ -1,11 +1,11 @@
 <?php
 
-namespace models;
+namespace Models;
 
-use models\Users;
+use \_assets\Includes\DatabaseConnection;
+use \Models\DatabaseException;
 use PDO;
 use PDOStatement;
-use _Assets\Includes\DatabaseConnection;
 
 class UserRepository
 {

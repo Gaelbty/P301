@@ -2,12 +2,12 @@
 
 namespace Controllers;
 
-use _Assets\Includes\DatabaseConnection;
-use models\UserRepository;
-use models\Users;
-use PHPMailer\PHPMailer\PHPMailer;
-use Views\Error;
-use Views\forgotPassword;
+use \_assets\Includes\DatabaseConnection;
+use \Models\UserRepository;
+use \Models\Users;
+use \Views\Error;
+use \Views\forgotPassword;
+use PHPMailer\PHPMailer\PHPMailer;;
 
 class ForgotPasswordController
 {
@@ -100,8 +100,6 @@ class ForgotPasswordController
 
     private function sendResetEmail(string $email, string $token): bool
     {
-        require_once __DIR__ . '/../vendor/autoload.php';
-
         $baseUrl = 'http://localhost:8080';
         $resetLink = $baseUrl . '/forgot?token=' . urlencode($token);
 

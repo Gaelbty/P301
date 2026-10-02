@@ -1,7 +1,6 @@
 <?php
 
 namespace Views;
-
 class ForgotPassword
 {
     public function __construct(
@@ -12,7 +11,7 @@ class ForgotPassword
 
     public function show(): void
     {
-        begin_page('Mot de passe oublié', '_assets/css/forgotPassword.css');
+        begin_page('Mot de passe oublié', '/css/forgotPassword.css');
         ?>
 
         <main>

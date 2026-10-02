@@ -1,5 +1,5 @@
 <?php
-namespace models; // PSR-12: head blocks must be separated by a single blank line
+namespace App\models; // PSR-12: head blocks must be separated by a single blank line
 
 use Model\Post\DatabaseException;
 use Model\Post\Includes;

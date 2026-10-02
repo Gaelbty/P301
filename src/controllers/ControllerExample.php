@@ -1,7 +1,9 @@
 <?php
 namespace Controllers;
-use Includes\Database\DatabaseConnection;
-use Models\Post;
+
+use \Controllers\PostRepository;
+use \Includes\Database\DatabaseConnection;
+use \Models\Post;
 
 class Example
 {

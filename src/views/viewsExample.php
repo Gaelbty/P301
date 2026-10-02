@@ -1,5 +1,5 @@
 <?php
-namespace views; // PSR-12: head blocks must be separated by a single blank line
+namespace App\views; // PSR-12: head blocks must be separated by a single blank line
 class Example { // PSR-12: opening brace next line
     public function show(): void { // PSR-12: opening brace next line
         ob_start();

@@ -5,13 +5,13 @@ namespace Views;
 class Error
 {
 
-    public function __construct(private readonly String $title, private readonly String $message)
+    public function __construct(private String $title, private String $message)
     {
     }
 
     public function show(): void
     {
-        begin_page('Erreur', '_assets/css/error.css');
+        begin_page('Erreur', '/css/error.css');
         ?>
         <main>
             <section class="error">

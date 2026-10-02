@@ -2,11 +2,10 @@
 
 namespace Controllers;
 
-use _Assets\Includes\DatabaseConnection;
-use models\UserRepository;
-use models\Users;
-use Views\Login;
-use Views\Error;
+use \_assets\Includes\DatabaseConnection;
+use \Models\UserRepository;
+use \Views\Error;
+use \Views\Login;
 
 class LoginController
 {
@@ -31,7 +30,7 @@ class LoginController
         session_start();
         $_SESSION['user_id'] = $user->getId();
 
-        header('Location: /member/dashboard');
+        header('Location: /dashboard');
         exit;
     }
 }

@@ -1,12 +1,11 @@
 <?php
 
 namespace Views;
-
 class Homepage
 {
     public function show(): void
     {
-        begin_page('Accueil', '_assets/css/welcome.css', false);
+        begin_page('Accueil', '/css/welcome.css', false);
         ?>
         <main>
             <header class="hero">

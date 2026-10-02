@@ -1,12 +1,11 @@
 <?php
 
 namespace Views;
-
 class Register
 {
     public function show(bool $notFilled, bool $validPassword): void
     {
-        begin_page('Register', '_assets/css/register.css');
+        begin_page('Register', '/css/register.css');
         ?>
         <form method="POST" action="/register">
             <fieldset>
