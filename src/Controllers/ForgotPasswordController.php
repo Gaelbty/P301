@@ -6,7 +6,7 @@ use \_assets\Includes\DatabaseConnection;
 use \Models\UserRepository;
 use \Models\Users;
 use \Views\Error;
-use \Views\forgotPassword;
+use \Views\ForgotPassword;
 use PHPMailer\PHPMailer\PHPMailer;;
 
 class ForgotPasswordController
