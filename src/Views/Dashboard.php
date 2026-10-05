@@ -7,7 +7,7 @@ readonly class Dashboard
 {
     public function __construct(private string $username) {}
 
-    public function show(int $nb_form, int $nb_answer, string $user_mail, array $infos_form, int $current_page): void
+    public function show(int $nb_form, int $nb_answer, string $user_mail, array $infos_form, int $current_page, int $total_pages): void
     {
         begin_page($this->username . '\'s dashboard', '/css/dashboard.css');
         ?>
@@ -88,12 +88,12 @@ readonly class Dashboard
                     </main>
 
                     <footer class="survey-pagination">
-                        <?php //if($current_page > 0): ?>
-                        <a href="?page=<?php --$current_page; ?>" class="button-pagination"><</a>
-                        <?php //endif; ?>
-                        <?php //if($current_page < ): ?>
-                        <a href="?page=<?php ++$current_page; ?>" class="button-pagination">></a>
-                        <?php //endif; ?>
+                        <?php if($current_page > 1): ?>
+                        <a href="?page=<?php echo $current_page == 1 ? $current_page : $current_page - 1; ?>"><button class="button-pagination"><</button></a>
+                        <?php endif; ?>
+                        <?php if($current_page < $total_pages): ?>
+                        <a href="?page=<?php echo $current_page + 1; ?>"><button class="button-pagination">></button></a>
+                        <?php endif; ?>
                     </footer>
 
                     <?php endif; ?>

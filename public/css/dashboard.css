@@ -16,6 +16,7 @@
 
     --radius-card: 12px;
     --radius-input: 9px;
+    --radius-pagination: 25px;
 }
 
 .body {
@@ -271,10 +272,6 @@
     border-radius: var(--radius-input);
 }
 
-button:hover {
-    background-color: var(--color-primary-hover);
-}
-
 .survey-pagination {
     display: flex;
     justify-content: center;
@@ -290,7 +287,11 @@ button:hover {
     background-color: var(--color-primary);
 
     border: none;
-    border-radius: var(--radius-input);
+    border-radius: var(--radius-pagination);
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
 }
 
 @media (max-width: 700px) {

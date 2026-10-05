@@ -35,19 +35,15 @@ class DashboardController extends HandleSessionActive
 
             $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
 
-            if ($page < 1) {
-                $page = 1;
-            }
-
             $limit = 6;
             $offset = ($page - 1) * $limit;
 
-            $totalPages = (int) ceil($nb_form / $limit);
+            $total_pages = (int) ceil($nb_form / $limit);
 
-            $infos_form = $formRepository->findFormInformations($_SESSION['user_id']);
+            $infos_form = $formRepository->findFormInformations($_SESSION['user_id'], $limit, $offset);
 
             if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-                (new Dashboard($username))->show($nb_form, $nb_answer, $user_mail, $infos_form, $page);
+                (new Dashboard($username))->show($nb_form, $nb_answer, $user_mail, $infos_form, $page, $total_pages);
             }
         } else {
             (new \Views\Error('Erreur connexion', "Vous n'êtes pas connecté", '/login'))->show();
